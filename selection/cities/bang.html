@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangalore</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        body {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url("https://media.istockphoto.com/id/1382384282/photo/bangalore-or-bengaluru.jpg?s=612x612&w=0&k=20&c=6pxwL3JxNV2B_NZSLMZLhrSLqAbyCPlGuSZYKImpjKQ=");
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+        }
+
+        .logo {
+            color: orange;
+            font-size: 24px;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .content h3 {
+            font-size: 36px;
+            margin-top: 20px;
+            letter-spacing: 2px;
+            font-weight: 300;
+        }
+
+        .places {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: rgba(255, 114, 0, 0.9);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 250px;
+            color: white;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card h4 {
+            margin: 10px 0;
+        }
+
+        .card p {
+            padding: 0 10px 10px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 140, 0, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <h2>Bangalore</h2>
+    </div>
+    
+    <div class="content">
+        <h3>Welcome to Bangalore!</h3>
+        <p>Bangalore, the capital of Karnataka, is known as the Silicon Valley of India. It offers a perfect blend of nature and technology.</p>
+        
+        <div class="places">
+            <div class="card">
+                <img src="https://imgs.search.brave.com/Gg0HzDPOFurmn-f08rUprbYvUKWAQ05DEhWdx1CNrCU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9iYW5n/YWxvcmV0b3VyaXNt/LmluL2ltYWdlcy92/Mi9oZWFkZXJzL2xh/bGJhZ2gtYm90YW5p/Y2FsLWdhcmRlbi1i/YW5nYWxvcmUtdGlt/aW5ncy1lbnRyeS1m/ZWUtYmFuZ2Fsb3Jl/LXRvdXJpc20taGVh/ZGVyLWNyLW1iZWxs/LTAyLmpwZw" alt="Lalbagh Botanical Garden">
+                <h4>Lalbagh Botanical Garden</h4>
+                <p>A stunning garden featuring a glass house and numerous species of flora.</p>
+            </div>
+            <div class="card">
+                <img src="https://imgs.search.brave.com/3Dz33rLtv4OOqpk_rZIjcnAYpVIych5D5UXqZGer5nk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oYmxp/bWcubW10Y2RuLmNv/bS9jb250ZW50L2h1/YmJsZS9pbWcvYmFu/Z2xvcmUvbW10L2Fj/dGl2aXRpZXMvbV9h/Y3Rpdml0aWVzX2Jh/bmdhbG9yZV9iYW5n/YWxvcmVfcGFsYWNl/X2xfNDA4XzYxMi5q/cGc" alt="Bangalore Palace">
+                <h4>Bangalore Palace</h4>
+                <p>An architectural wonder inspired by England’s Windsor Castle.</p>
+            </div>
+            <div class="card">
+                <img src="https://imgs.search.brave.com/Qn8hycqdCCw68hSAGh6c-KP8LPuncAaG5V5ZaJpwk60/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTkz/OTIyMzk4L3Bob3Rv/L3ZpZGhhbmEtc291/ZGhhLWluLWJhbmdh/bG9yZS5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9WGdySF9u/dHl4UFF5dTNPZjh2/TnVlOHJCZmxEZU5O/OXh4bEtWdGxRcWkz/cz0" alt="Vidhana Soudha">
+                <h4>Vidhana Soudha</h4>
+                <p>The seat of the Karnataka legislature, known for its grand architecture.</p>
+            </div>
+            <div class="card">
+                <img src="https://imgs.search.brave.com/NXtIQwTjxhWF46eDr4-AJjbEuOYVhp7TUWuKGwROQwo/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtYmxvZy50cmVl/Ym8uY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIyLzEwL0Nh/ZmUtQXp6dXJlLTEw/MjR4Njc1LmpwZw" alt="Commercial Street">
+                <h4>Commercial Street</h4>
+                <p>A bustling shopping area with local shops and street food.</p>
+            </div>
+            <div class="card">
+                <img src="https://imgs.search.brave.com/hznf3F4P-ji4K_X3ud84aSCbG7HlU43MBE9I7W-fupk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9iYW5n/YWxvcmV0b3VyaXNt/LmluL2ltYWdlcy9o/ZWFkZXJzL3RpcHUt/c3VtbWVyLXBhbGFj/ZS1iYW5nYWxvcmUt/dGltaW5ncy1lbnRy/eWZlZS1iYW5nYWxv/cmUtdG91cmlzbS1o/ZWFkZXIuanBn" alt="Tipu Sultan's Summer Palace">
+                <h4>Tipu Sultan's Summer Palace</h4>
+                <p>A historical monument showcasing Indo-Islamic architecture.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+.about {
+    margin: 20px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+
+.about .ourstory {
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid rgb(182, 181, 181);
+}
+
+.about .ourstory h1 {
+    color: orange;
+}
+
+.missions {
+    display: flex;
+    margin: 60px;
+    padding: 10px;
+}
+
+.mission {
+    border: 2px solid transparent;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+    background-color: rgb(243, 166, 23);
+    max-width: 300px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.services {
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid transparent;
+    font-size: 20px;
+}
+
+.service {
+    border: 2px solid rgb(182, 181, 181);
+    margin: 20px;
+    padding: 10px;
+    transition: transform 320ms;
+}
+
+.service:hover {
+    transform: scale(1.03);
+}
+
+.service h2 {
+    color: orange;
+}
+
+.contact-us h1 {
+    color: orange;
+}
+
+.contact-us {
+    margin: 20px;
+    padding: 10px;
+}
+
+.contact {
+    display: flex;
+}
+
+.num {
+    margin-left: 20px;
+    padding: 10px;
+    border: 2px solid transparent;
+    object-fit: contain;
+}
+
+.contac {
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid orange;
+    box-shadow: 5px 5px 10px rgba(134, 98, 98, 0.9);
+    max-width: 300px;
+}

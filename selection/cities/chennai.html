@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chennai</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        body {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url("https://media.istockphoto.com/id/469550423/photo/chennai-nightscape.jpg?s=612x612&w=0&k=20&c=ZcUQgu91G7Z31ru3UPVPWhwaPJYmLEHyln8iyXQgPX8=");
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+        }
+
+        .logo {
+            color: orange;
+            font-size: 24px;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .content h3 {
+            font-size: 36px;
+            margin-top: 20px;
+            letter-spacing: 2px;
+            font-weight: 300;
+        }
+
+        .places {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: rgba(255, 114, 0, 0.9);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 250px;
+            color: white;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card h4 {
+            margin: 10px 0;
+        }
+
+        .card p {
+            padding: 0 10px 10px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 140, 0, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <h2>Chennai</h2>
+    </div>
+    
+    <div class="content">
+        <h3>Welcome to Chennai!</h3>
+        <p>Chennai, the capital of Tamil Nadu, is known for its cultural heritage and beautiful beaches.</p>
+        
+        <div class="places">
+            <div class="card">
+                <img src="https://imgs.search.brave.com/gGU1qqYEqtjxQ68y-d9vSPszDSBF__BoQ97uIbe7QfE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/MTJnby5jb20vMC9m/aXQvMTAyNC8wL2Nl/LzEvcGxhaW4vczM6/Ly8xMmdvLXdlYi1z/dGF0aWMvc3RhdGlj/L2ltYWdlcy91cGxv/YWQtbWVkaWEvMzkw/Ni5qcGVn" alt="Mahabalipuram">
+                <h4>Mahabalipuram</h4>
+                <p>A UNESCO World Heritage site famous for its rock-cut temples.</p>
+            </div>
+            <div class="card">
+                <img src="https://imgs.search.brave.com/wA3er51mIlB24b0WPhH9OFzDSBMkHTO-YRy6U-KUUw0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/c3RhdGljbWIuY29t/L21iY29udGVudC9p/bWFnZXMvY3JvcC91/cGxvYWRzLzIwMjIv/OS9Gcm90aHktd2F2/ZXMtb2Ytd2F0ZXIt/dG91Y2hpbmctdGhl/LXNob3Jlcy1hdC1N/YXJpbmEtQmVhY2hf/MF8xMjAwLmpwZw" alt="Marina Beach">
+                <h4>Marina Beach</h4>
+                <p>One of the longest beaches in the world, perfect for evening strolls.</p>
+            </div>
+            <div class="card">
+                <img src="https://imgs.search.brave.com/qkk2j_lgwG42tToV_tG1k03FnKo3B4erYtI8ehKMghE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvODI2/OTc4MDMyL3Bob3Rv/L2NoZW5uYWktaW5k/aWEta2FwYWxlZXN3/YXJhci1oaW5kdS10/ZW1wbGUtb24tamFu/dWFyeS0yMC0yMDE3/LWluLWNoZW5uYWkt/aW5kaWEuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPTg4V1lH/ZVpyV1F4bHFJMi1z/bnJMYlgtNFNMdzNL/SjdJSUc1WTRQNGc4/d3c9" alt="Kapaleeshwarar Temple">
+                <h4>Kapaleeshwarar Temple</h4>
+                <p>A beautiful temple known for its intricate architecture.</p>
+            </div>
+            <div class="card">
+                <img src="https://imgs.search.brave.com/zn_-OMKGxbxMK42lz03vBoQqyOGjMMI5rsYxZSRQDVE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90cmF2/ZWxsZXJzY3JpYmUu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDI0LzA0L1ZhbmRh/bHVyLVpvby1DaGVu/bmFpLUltYWdlcy53/ZWJw" alt="Vandalur Zoo">
+                <h4>Vandalur Zoo</h4>
+                <p>The first zoological park in India, home to diverse wildlife.</p>
+            </div>
+            <div class="card">
+                <img src="https://imgs.search.brave.com/ey1ZGN-GweCJy9wZiyFRzXqiUyZk0CpAIdkfE7FOltE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtYmxvZy50cmVl/Ym8uY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIwLzA5L1Ro/ZS1Hb3Zlcm5tZW50/LU11c2V1bS0xMDI0/eDc2OC5qcGc" alt="Chennai Museum">
+                <h4>Chennai Museum</h4>
+                <p>One of the largest museums in India with an extensive collection.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
