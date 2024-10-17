@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +24,7 @@
             background-size: cover;
             background-position: center;
             padding: 20px;
+            cursor: pointer;
         }
 
         .logo {
@@ -84,44 +86,67 @@
             transform: scale(1.05);
             background-color: rgba(255, 140, 0, 0.9);
         }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: orange;
+            color: white;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        button:hover{
+            background-color: darkorange;
+        }
     </style>
 </head>
+
 <body>
     <div class="logo">
         <h2>Hyderabad</h2>
     </div>
-    
+
     <div class="content">
         <h3>Welcome to Hyderabad!</h3>
         <p>Hyderabad, the City of Pearls, is renowned for its rich history and culinary delights.</p>
-        
+
         <div class="places">
             <div class="card">
-                <img src="https://imgs.search.brave.com/Gi10RzGs1dRy4X9xQ3loX84IxjJZ9fdWxE-s7qtNSn0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/c3RhdGljbWIuY29t/L21iY29udGVudC9p/bWFnZXMvY3JvcC91/cGxvYWRzLzIwMjIv/OS9DaGFybWluYXIt/SHlkZXJhYmFkXzBf/MTIwMC5qcGc" alt="Charminar">
+                <img src="https://imgs.search.brave.com/Gi10RzGs1dRy4X9xQ3loX84IxjJZ9fdWxE-s7qtNSn0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/c3RhdGljbWIuY29t/L21iY29udGVudC9p/bWFnZXMvY3JvcC91/cGxvYWRzLzIwMjIv/OS9DaGFybWluYXIt/SHlkZXJhYmFkXzBf/MTIwMC5qcGc"
+                    alt="Charminar">
                 <h4>Charminar</h4>
                 <p>An iconic monument symbolizing Hyderabad's heritage.</p>
             </div>
             <div class="card">
-                <img src="https://imgs.search.brave.com/v5neguau9YGFZiWbT3uoPK2kg7T5Q2NtAaRGyyNVejU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oYmxp/bWcubW10Y2RuLmNv/bS9jb250ZW50L2h1/YmJsZS9pbWcvaHlk/ZXJhYmFkL21tdC9h/Y3Rpdml0aWVzL21f/YWN0aXZpdGllc19o/eWRlcmFiYWRfaHVz/c2Fpbl9zYWdhcl9s/YWtlX2xfNDg2Xzcy/OS5qcGc" alt="Hussain Sagar Lake">
+                <img src="https://imgs.search.brave.com/v5neguau9YGFZiWbT3uoPK2kg7T5Q2NtAaRGyyNVejU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oYmxp/bWcubW10Y2RuLmNv/bS9jb250ZW50L2h1/YmJsZS9pbWcvaHlk/ZXJhYmFkL21tdC9h/Y3Rpdml0aWVzL21f/YWN0aXZpdGllc19o/eWRlcmFiYWRfaHVz/c2Fpbl9zYWdhcl9s/YWtlX2xfNDg2Xzcy/OS5qcGc"
+                    alt="Hussain Sagar Lake">
                 <h4>Hussain Sagar Lake</h4>
                 <p>A picturesque lake featuring the famous Buddha statue.</p>
             </div>
             <div class="card">
-                <img src="https://imgs.search.brave.com/T9_-8xf6YkhEfW5E0W1eTq-bD_0XY-PDl7O13eXsOLo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aHlkZXJhYmFkdG91/cmlzbS50cmF2ZWwv/aW1hZ2VzL3YyL2hl/YWRlci1wbGFjZXMv/Z29sY29uZGEtZm9y/dC1oeWRlcmFiYWQt/dG91cmlzbS1hdHRy/YWN0aW9uLWVudHJ5/ZmVlLXRpbWluZ3Mt/cmV2aWV3cy1oZWFk/ZXIuanBn" alt="Golconda Fort">
+                <img src="https://imgs.search.brave.com/T9_-8xf6YkhEfW5E0W1eTq-bD_0XY-PDl7O13eXsOLo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aHlkZXJhYmFkdG91/cmlzbS50cmF2ZWwv/aW1hZ2VzL3YyL2hl/YWRlci1wbGFjZXMv/Z29sY29uZGEtZm9y/dC1oeWRlcmFiYWQt/dG91cmlzbS1hdHRy/YWN0aW9uLWVudHJ5/ZmVlLXRpbWluZ3Mt/cmV2aWV3cy1oZWFk/ZXIuanBn"
+                    alt="Golconda Fort">
                 <h4>Golconda Fort</h4>
                 <p>A historical fort known for its architecture and history.</p>
             </div>
             <div class="card">
-                <img src="https://imgs.search.brave.com/TpRKdlYpie-3jZUxCBoGVyMwJsgEpKAgzXKt2DireGE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oeWRl/cmFiYWR6b25lLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAx/OS8wOS9CaXJsYS1N/YW5kaXItVGVtcGxl/LUh5ZGVyYWJhZC02/NTB4NDg4LmpwZw" alt="Birla Mandir">
+                <img src="https://imgs.search.brave.com/TpRKdlYpie-3jZUxCBoGVyMwJsgEpKAgzXKt2DireGE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oeWRl/cmFiYWR6b25lLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAx/OS8wOS9CaXJsYS1N/YW5kaXItVGVtcGxl/LUh5ZGVyYWJhZC02/NTB4NDg4LmpwZw"
+                    alt="Birla Mandir">
                 <h4>Birla Mandir</h4>
                 <p>A stunning temple made of white marble, offering panoramic views.</p>
             </div>
             <div class="card">
-                <img src="https://imgs.search.brave.com/Kg6p6wMu-p0y_uNSz7twrW5aC4N_gtQkmcr4_VX3hJU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9h/L2EwL1JhbW9qaV9G/aWxtX0NpdHksX0h5/ZGVyYWJhZF8tX3Zp/ZXdzX2Zyb21fUmFt/b2ppX0ZpbG1fQ2l0/eV8oOTIpLkpQRw" alt="Ramoji Film City">
+                <img src="https://imgs.search.brave.com/Kg6p6wMu-p0y_uNSz7twrW5aC4N_gtQkmcr4_VX3hJU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9h/L2EwL1JhbW9qaV9G/aWxtX0NpdHksX0h5/ZGVyYWJhZF8tX3Zp/ZXdzX2Zyb21fUmFt/b2ppX0ZpbG1fQ2l0/eV8oOTIpLkpQRw"
+                    alt="Ramoji Film City">
                 <h4>Ramoji Film City</h4>
                 <p>A sprawling film complex that is a must-visit for movie buffs.</p>
             </div>
         </div>
+        <a href="explore.html#foodinhyd"><button>Explore Food</button></a>
     </div>
 </body>
+
 </html>

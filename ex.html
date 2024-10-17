@@ -1,0 +1,928 @@
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="project.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cities</title>
+    <style>
+        /* General styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+            font-size: 2.5em;
+        }
+
+        /* Styling for the city selector */
+        #citySelect {
+            display: block;
+            width: 60%;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 1.2em;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        /* Styling for the main container for cards */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Individual card style */
+        .cards .new {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            width: 300px;
+            text-align: center;
+        }
+
+        .cards .new:hover {
+            transform: scale(1.05);
+        }
+
+        /* Image styles */
+        .cards img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 5px solid #00aaff;
+        }
+
+        /* Styling for card headings */
+        .cards h3 {
+            color: #00aaff;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        /* Card paragraph styling */
+        .cards p {
+            padding: 0 15px 20px;
+            font-size: 1em;
+            color: #555;
+            text-align: justify;
+        }
+
+        /* Section header styling */
+        section h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 50px;
+            font-size: 2em;
+            border-bottom: 2px solid #00aaff;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #citySelect {
+                width: 80%;
+            }
+
+            .cards .new {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Select a City</h1>
+    <select id="citySelect" onchange="getCityInfo()">
+        <option value="">--Select a City--</option>
+        <option value="new delhi">New Delhi</option>
+        <option value="agra">Agra</option>
+        <option value="ladakh">Ladakh</option>
+        <option value="mumbai">Mumbai</option>
+        <option value="gujarat">Gujarat</option>
+        <option value="hyderabad">Hyderabad</option>
+        <option value="banglore">Banglore</option>
+        <option value="chennai">chennai</option>
+        <option value="Vijayawada">Vijayawada</option>
+        <option value="vizag">vizag</option>
+
+    </select>
+    <h1>Destinations</h1>
+    <div class="cards">
+        <section id="new delhi" class="citySection">
+            <h2>NEW DELHI</h2>
+            <div class="new">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/lotus-temple-delhi-attr-nearby?qlt=82&ts=1727352286740"
+                    alt="" class="cards">
+                <h3>Lotus Temple</h3>
+                <p>The Lotus Temple, located in New Delhi, is a Bahá'í House of Worship that opened in 1986. Known for
+                    its distinctive lotus flower shape, the temple is constructed from white marble and is surrounded by
+                    beautiful gardens.
+                    The design symbolizes purity and peace, and it is open to people of all faiths for meditation and
+                    prayer. The interior features a spacious prayer hall that can accommodate up to 2,500 people. The
+                    temple has won numerous architectural awards and is a popular tourist destination, known for its
+                    serene ambiance and stunning aesthetics. Would you like to know more about its architecture or the
+                    Bahá'í</p>
+                <div class="new">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/qutab-minar-delhi-attr-nearby?qlt=82&ts=1727352287213"
+                        alt="" class="cards">
+                    <h3>Qutub Minar</h3>
+                    <p>Qutub Minar, located in Delhi, India, is the tallest brick minaret in the world, standing at 73
+                        meters (240 feet). It was commissioned by Qutb al-Din Aibak in 1193 to mark the beginning of
+                        Muslim rule in India and is part of the Qutub complex, a UNESCO World Heritage Site.
+
+                        The minaret is adorned with intricate carvings and inscriptions in Arabic, reflecting
+                        Indo-Islamic architecture. Its five distinct stories are separated by balconies, and the first
+                        three are made of red sandstone, while the top two are of marble and sandstone.
+
+                        The Qutub Minar complex also includes other historical structures, such as the Iron Pillar of
+                        Delhi and the Alai Darwaza. It is a popular tourist attraction and an important symbol of
+                        India's rich architectural heritage. </p>
+                    <div class="new">
+                        <img src="https://s7ap1.scene7.com/is/image/incredibleindia/humayuns-tomb-delhi-1-attr-nearby?qlt=82&ts=1727352053833"
+                            alt="" class="cards">
+                        <h3>Humayuns tomb</h3>
+                        <p>Qutub Minar, located in Delhi, India, is the tallest brick minaret in the world, standing at
+                            73 meters (240 feet). It was commissioned by Qutb al-Din Aibak in 1193 to mark the beginning
+                            of Muslim rule in India and is part of the Qutub complex, a UNESCO World Heritage Site.
+
+                            The minaret is adorned with intricate carvings and inscriptions in Arabic, reflecting
+                            Indo-Islamic architecture. Its five distinct stories are separated by balconies, and the
+                            first three are made of red sandstone, while the top two are of marble and sandstone.
+
+                            The Qutub Minar complex also includes other historical structures, such as the Iron Pillar
+                            of Delhi and the Alai Darwaza. It is a popular tourist attraction and an important symbol of
+                            India's rich architectural heritage. </p>
+                        <div class="new">
+                            <img src="https://s7ap1.scene7.com/is/image/incredibleindia/jama-masjid-delhi-attr-nearby?qlt=82&ts=1727351836620"
+                                alt="" class="cards">
+                            <h3>jama masjid</h3>
+                            <div>
+                                <p>Jama Masjid is one of the largest mosques in India, located in Old Delhi.
+                                    Commissioned by Mughal Emperor Shah Jahan in 1650, it took about six years to
+                                    complete and is a stunning example of Mughal architecture.
+
+                                    The mosque features an impressive courtyard that can hold thousands of worshippers,
+                                    along with three grand gates, four minarets, and two towering domes. Its intricate
+                                    carvings and beautiful calligraphy enhance its grandeur.
+
+                                    Jama Masjid is not only a place of worship but also a significant historical site,
+                                    reflecting the cultural heritage of Delhi. Visitors can explore the mosque and its
+                                    surroundings, which are vibrant with local markets and street food.</p>
+                                <div class="new">
+                                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/red-fort-delhi-attr-nearby?qlt=82&ts=1727352271595"
+                                        alt="" class="cards">
+                                    <h3>RedFort</h3>
+                                    <p>Red Fort, or Lal Qila, is a UNESCO World Heritage Site located in the heart of
+                                        Old Delhi. Built between 1638 and 1648 by Mughal Emperor Shah Jahan, it served
+                                        as the main residence of the Mughal emperors for nearly 200 years.
+
+                                        The fort is known for its stunning red sandstone architecture and features
+                                        impressive structures like the Diwan-i-Aam (Hall of Public Audience) and
+                                        Diwan-i-Khas (Hall of Private Audience). Its intricate design reflects the
+                                        grandeur of Mughal architecture, combining Persian, Timurid, and Indian styles.
+
+                                        Today, the Red Fort is a major tourist attraction and a symbol of India's rich
+                                        history. It also hosts the annual Independence Day celebrations, where the Prime
+                                        Minister addresses the nation from its ramparts.</p>
+                                    <div class="new">
+                                        <img src="https://s7ap1.scene7.com/is/image/incredibleindia/raj-ghat-delhi-attr-nearby?qlt=82&ts=1727352116756"
+                                            alt="" class="cards">
+                                        <h3>Rajghat</h3>
+                                        <p>Rajghat is a memorial dedicated to Mahatma Gandhi, located on the banks of
+                                            the Yamuna River in New Delhi. It marks the site where Gandhi was cremated
+                                            in 1948 after his assassination.
+                                            The memorial features a simple black marble platform that is surrounded by a
+                                            serene garden. The site includes inscriptions of Gandhi's famous quotes and
+                                            is a place of reflection and tribute to his legacy of non-violence and
+                                            peace.
+                                            Rajghat attracts numerous visitors, including dignitaries and tourists, who
+                                            come to pay their respects. It's a peaceful spot, ideal for contemplation
+                                            amidst the bustling city. </p>
+        </section>
+        <!-- Agra Section -->
+        <section id="Agra" class="citySection">
+            <h2>Agra</h2>
+            <div class="new">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/taj-mahal-agra-uttar-pradesh-1-attr-nearby?qlt=82&ts=1726650395114"
+                    alt="" class="cards">
+                <h3>Taj Mahal</h3>
+                <p>The Taj Mahal, located in Agra, India, is a UNESCO World Heritage Site and one of the most iconic
+                    monuments in the world. Commissioned by Mughal Emperor Shah Jahan in memory of his wife, Mumtaz
+                    Mahal, it was completed in 1653.
+
+                    Renowned for its stunning white marble architecture, the Taj Mahal combines Persian, Islamic, and
+                    Indian styles. Its main structure is flanked by lush gardens, reflecting pools, and other buildings,
+                    including a mosque and a guest house.
+
+                    The intricate inlay work and the changing hues of the marble throughout the day add to its beauty.
+                    The Taj Mahal is often seen as a symbol of love and is a major tourist attraction, drawing millions
+                    of visitors each year. </p>
+            </div>
+            <div class="new">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/the-national-chambal-sanctuary-agra-1-attr-nearby?qlt=82&ts=1726650407748"
+                    alt="" class="cards">
+                <h3>National chambal sanctuary</h3>
+                <p>The National Chambal Sanctuary is a protected area located along the Chambal River, spanning the
+                    borders of Uttar Pradesh, Madhya Pradesh, and Rajasthan in India. Established in 1979, it aims to
+                    conserve the unique biodiversity of the region, particularly the gharial, a critically endangered
+                    crocodile species, as well as other wildlife like river dolphins, turtles, and various bird species.
+
+                    The sanctuary is known for its rugged ravines and riverine ecosystem, making it a significant site
+                    for both conservation and ecotourism. Visitors can enjoy boat rides along the Chambal River,
+                    providing opportunities for wildlife sightings and photography. Conservation efforts in the
+                    sanctuary have helped improve the gharial population and protect the delicate balance of this unique
+                    habitat.</p>
+            </div>
+        </section>
+        <!-- Ladakh Section -->
+        <section id="Ladakh" class="citySection">
+            <h2>Ladakh</h2>
+            <div class="new">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/shanti-stupa-leh-ladakh-1-attr-nearby?qlt=82&ts=1726667881441"
+                    alt="" class="cards">
+                <h3>sanchi stupa</h3>
+                <p>The Sanchi Stupa, located in Madhya Pradesh, is one of the most important Buddhist monuments in
+                    India. Built during the reign of Emperor Ashoka in the 3rd century BCE, it is a UNESCO World
+                    Heritage Site.
+
+                    The stupa is known for its large hemispherical dome, which houses relics of the Buddha, and is
+                    surrounded by beautifully carved gateways (toranas) depicting various scenes from Buddha's life and
+                    teachings. The site also features other stupas, monasteries, and archaeological remains.
+
+                    Sanchi is significant not only for its architecture but also for its role in the spread of Buddhism.
+                    It attracts scholars, pilgrims, and tourists alike.</p>
+            </div>
+            <div class="new">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/changthang-wildlife-sanctuary-leh-ladakh-1-new-attr-nearby?qlt=82&ts=1726667892084"
+                    alt="" class="cards">
+                <h3>changthang wildlife sanctuary</h3>
+                <div>
+                    <p>Changthang Wildlife Sanctuary is located in the Ladakh region of India, covering an area of about
+                        2,500 square kilometers. Established in 1987, it is renowned for its high-altitude ecosystem,
+                        including alpine meadows, lakes, and snow-capped mountains.
+
+                        The sanctuary is home to several unique and endangered species, such as the Tibetan antelope
+                        (chiru), the snow leopard, and the kiang (Tibetan wild ass). It also features beautiful
+                        landscapes like the Pangong Lake and Tso Moriri, attracting nature lovers and trekkers.
+
+                        Due to its remote location and harsh climate, the sanctuary plays a vital role in the
+                        conservation of its wildlife and the traditional lifestyles of local nomadic communities. It
+                        offers opportunities for eco-tourism while promoting awareness of the fragile ecosystem in this
+                        region.</p>
+                    <div class="new">
+                        <img src="https://s7ap1.scene7.com/is/image/incredibleindia/mulbekh-monastery-&-maitreya-buddha-kargil-ladakh-1-attr-nearby?qlt=82&ts=1726667770387"
+                            alt="" class="cards">
+                        <h3>mulbekh monastery</h3>
+                        <p>Mulbekh Monastery, located in the Kargil district of Ladakh, India, is a significant Buddhist
+                            site known for its stunning architecture and serene surroundings. Founded in the 8th
+                            century, it belongs to the Gelugpa sect of Tibetan Buddhism.
+
+                            The monastery features impressive murals, ancient scriptures, and a notable statue of
+                            Maitreya Buddha, which is carved into a rock and stands about 9 meters tall. The site also
+                            offers panoramic views of the surrounding mountains and valleys.
+
+                            Mulbekh is a popular stop for travelers exploring the region, providing insight into the
+                            rich cultural and spiritual heritage of Ladakh. It is a peaceful place for meditation and
+                            reflection, attracting both pilgrims and tourists.</p>
+                        <div class="new">
+                            <img src="https://s7ap1.scene7.com/is/image/incredibleindia/kargil-war-memorial-kargil-ladakh-1-attr-nearby?qlt=82&ts=1726667880951"
+                                alt="" class="cards">
+                            <h3>kargil war memorial</h3>
+                            <p>The Kargil War Memorial is located in Dras, Ladakh, and commemorates the sacrifices of
+                                Indian soldiers during the Kargil War of 1999. Situated near the national highway, it
+                                serves as a poignant reminder of the bravery and valor displayed by the Indian Armed
+                                Forces in the conflict against Pakistan.
+
+                                The memorial features a striking structure with a wall bearing the names of soldiers who
+                                lost their lives, along with a massive Indian flag. Visitors can also see a replica of
+                                the war's key battles and a museum that showcases the history and events of the Kargil
+                                War.
+
+                                The site is a place of remembrance and respect, attracting both locals and tourists who
+                                pay tribute to the soldiers' heroism and reflect on the sacrifices made for the nation.
+                            </p>
+                        </div>
+                        <div class="new">
+                            <img src="https://s7ap1.scene7.com/is/image/incredibleindia/tso-moriri-lake-leh-ladakh-1-attr-nearby?qlt=82&ts=1726667918609"
+                                alt="" class="cards">
+                            <h3>tso moriri lake</h3>
+                            <p>Tso Moriri Lake, located in the Changthang region of Ladakh, India, is a stunning
+                                high-altitude lake situated at approximately 4,522 meters (14,836 feet) above sea level.
+                                It spans about 28 kilometers in length and is known for its breathtaking turquoise-blue
+                                waters surrounded by rugged mountains and vast landscapes.
+
+                                The lake is a part of the Tso Moriri Wetland Conservation Reserve, which is home to
+                                diverse wildlife, including migratory birds like bar-headed geese and various species of
+                                fish. The area is also inhabited by local nomadic communities, such as the Changpa, who
+                                rely on yak herding.
+
+                                Tso Moriri is less commercialized than other lakes in the region, offering a peaceful
+                                and pristine environment for visitors. It is a popular destination for trekking,
+                                photography, and experiencing the unique high-altitude ecosystem. The journey to the
+                                lake, with its scenic views and remote beauty, makes it a memorable adventure for
+                                travelers.</p>
+                        </div>
+                        <div class="new">
+                            <img src="https://s7ap1.scene7.com/is/image/incredibleindia/tiger-hill-kargil-ladakh-1-attr-nearby?qlt=82&ts=1726667791261"
+                                alt="" class="cards">
+                            <h3>Tiger hill</h3>
+                            <p>India Standing at an elevation of about 2,590 meters (8,500 feet), it offers stunning
+                                panoramic views of the Kanchenjunga mountain range, the third highest peak in the world.
+
+                                Tiger Hill is particularly famous for its breathtaking sunrise views, where the first
+                                rays of sunlight illuminate the snow-capped peaks, creating a spectacular sight. The
+                                site is a popular destination for tourists and photographers.
+
+                                At the summit, there is a Buddhist monastery and a Shiva temple, adding to its spiritual
+                                significance. The hill can be accessed via a short trek or by vehicle, making it an
+                                accessible spot for visitors looking to experience the beauty of the Himalayas.</p>
+        </section>
+        <!-- Gujarat Section -->
+        <section id="Gujarat" class="citySection">
+            <h2>Gujarat</h2>
+            <div class="new">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/gayatri-temple-dwarka-gujarat-attr-nearby?qlt=82&ts=1726734605152"
+                    alt="" class="cards">
+                <h3>Gayatri Temple dwarka</h3>
+                <p>The Gayatri Temple in Dwarka, Gujarat, is a revered Hindu shrine dedicated to Goddess Gayatri, who is
+                    considered the personification of the Vedas and a symbol of knowledge and enlightenment. Located
+                    near the coastal town of Dwarka, the temple is an important pilgrimage site.
+
+                    The temple features intricate architecture, with beautiful carvings and sculptures that reflect
+                    traditional Indian craftsmanship. It is often visited by devotees seeking blessings for wisdom and
+                    spiritual growth. The serene atmosphere and the temple's proximity to other significant sites in
+                    Dwarka, including the famous Dwarkadhish Temple, make it a notable stop for pilgrims and tourists
+                    alike.</p>
+            </div>
+            <div class="new">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/rukmini-devi-temple-gujarat-1-attr-nearby?qlt=82&ts=1726734656078"
+                    alt="" class="cards">
+                <h3>Rukmini Devi Temple</h3>
+                <p>The Rukmini Devi Temple, located in Dwarka, Gujarat, is dedicated to Rukmini, the consort of Lord
+                    Krishna. This ancient temple is an important pilgrimage site, known for its stunning architecture
+                    and intricate carvings.
+
+                    The temple is built on a beautiful landscape, often visited by devotees seeking blessings and to pay
+                    homage to Rukmini's devotion to Krishna. It features vibrant murals and sculptures depicting scenes
+                    from Hindu mythology. The temple is a key part of the religious and cultural heritage of Dwarka,
+                    attracting visitors for both its spiritual significance and artistic beauty.</p>
+            </div>
+            <div class="new">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/shivrajpur-beach-dwarka-city-attr?qlt=82&ts=1726734874134"
+                    alt="" class="cards">
+                <h3>shivrajpur beach</h3>
+                <p>Shivarajpur Beach, located near Dwarka in Gujarat, is known for its serene atmosphere and pristine
+                    beauty. The beach offers a picturesque landscape with golden sands, clear blue waters, and scenic
+                    views of the Arabian Sea.
+
+                    It is relatively less crowded compared to other beaches in the region, making it an ideal spot for
+                    relaxation, picnics, and enjoying water sports like snorkeling and jet skiing. The beach is also
+                    home to various marine life, making it a good location for nature enthusiasts.
+
+                    Visitors can enjoy stunning sunsets and explore the nearby coastal attractions, including the iconic
+                    Dwarkadhish Temple. Shivarajpur Beach is a peaceful escape for those looking to enjoy the natural
+                    beauty of Gujarat's coastline.</p>
+                <div class="new">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/gaga-wildlife-sanctuary-dwarka-city-attr?qlt=82&ts=1726734996173"
+                        alt="" class="cards">
+                    <h3>gaga wildlife sanctuary</h3>
+                    <p>Shivarajpur Beach, located near Dwarka in Gujarat, is known for its serene atmosphere and
+                        pristine beauty. The beach offers a picturesque landscape with golden sands, clear blue waters,
+                        and scenic views of the Arabian Sea.
+
+                        It is relatively less crowded compared to other beaches in the region, making it an ideal spot
+                        for relaxation, picnics, and enjoying water sports like snorkeling and jet skiing. The beach is
+                        also home to various marine life, making it a good location for nature enthusiasts.
+
+                        Visitors can enjoy stunning sunsets and explore the nearby coastal attractions, including the
+                        iconic Dwarkadhish Temple. Shivarajpur Beach is a peaceful escape for those looking to enjoy the
+                        natural beauty of Gujarat's coastline.</p>
+        </section>
+        <!-- Mumbai Section -->
+        <section id="Mumbai" class="citySection">
+            <h2>Mumbai</h2>
+            <div class="new">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/shree-chhatrapathi-shahu-museum-kolhapur-maharashtra-1-attr-nearby?qlt=82&ts=1726668870437"
+                    alt="" class="cards">
+                <h3>shree chatrapathi shivaji Museum</h3>
+                <p>Shree Chhatrapati Shivaji Museum, located in Mumbai, India, is dedicated to the legacy of Chhatrapati
+                    Shivaji Maharaj, the founder of the Maratha Empire. The museum showcases a collection of artifacts,
+                    paintings, and sculptures that highlight Shivaji's life, achievements, and the rich history of the
+                    Maratha dynasty.
+
+                    The exhibits include historical documents, weapons, and replicas of significant events from
+                    Shivaji's reign. The museum aims to educate visitors about his contributions to Indian history and
+                    culture, promoting a sense of pride in Maratha heritage.
+
+                    Its location in the heart of Mumbai makes it accessible for both locals and tourists, providing a
+                    deeper understanding of one of India's most revered historical figures.</p>
+                <div class="new">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/gateway-of-india-mumbai-maharashtra-1-attr-nearby?qlt=82&ts=1727355349679"
+                        alt="" class="cards">
+                    <h3>Gateway of India</h3>
+                    <p>The Gateway of India is an iconic arch monument located in Mumbai, Maharashtra. Built in 1924 to
+                        commemorate the visit of King George V and Queen Mary to India, it stands 26 meters tall and
+                        overlooks the Arabian Sea.
+
+                        Constructed in Indo-Saracenic architectural style, the Gateway is made of yellow basalt and
+                        features intricate latticework. It serves as a popular tourist attraction and a symbol of
+                        Mumbai's rich history.
+
+                        Visitors often take boat rides from the nearby jetty, exploring the coast or visiting nearby
+                        attractions like Elephanta Island. The area around the Gateway is lively, with street vendors
+                        and vibrant local culture. </p>
+                    <div class="new">
+                        <img src="https://s7ap1.scene7.com/is/image/incredibleindia/ellora-caves-chhatrapati-sambhaji-nagar-maharashtra-1-attr-nearby?qlt=82&ts=1727010526940"
+                            alt="" class="cards">
+                        <h3>Ellora caves</h3>
+                        <p>The Ellora Caves, located near Aurangabad in Maharashtra, India, are a UNESCO World Heritage
+                            Site known for their remarkable rock-cut architecture. Dating back to the 5th to 10th
+                            centuries, the complex comprises 34 caves, featuring a blend of Buddhist, Hindu, and Jain
+                            monuments.
+
+                            The caves are renowned for their intricate sculptures and impressive frescoes, with the most
+                            famous being the Kailasa Temple (Cave 16), which is a massive monolithic structure dedicated
+                            to Lord Shiva. Other notable caves include Buddhist viharas and chaityas that showcase the
+                            artistic skills of ancient Indian craftsmen.
+
+                            Ellora is a significant site for exploring the coexistence of different religious traditions
+                            and remains a major attraction for history enthusiasts and tourists alike. The stunning rock
+                            formations and carvings make it a must-visit destination in India.</p>
+                        <div class="new">
+                            <img src="https://s7ap1.scene7.com/is/image/incredibleindia/gautala-autramghat-sanctuary-chhatrapati-sambhaji-nagar-maharashtra-2-attr-nearby?qlt=82&ts=1727010493109"
+                                alt="" class="cards">
+                            <h3>Gautala autramghat sanctuary</h3>
+                            <p>Gautala Autramghat Sanctuary is located in the Aurangabad district of Maharashtra, India.
+                                Established in 1987, this sanctuary covers an area of approximately 63 square kilometers
+                                and is known for its rich biodiversity and scenic beauty.
+
+                                The sanctuary is home to a variety of wildlife, including leopards, deer, wild boars,
+                                and numerous bird species, making it a popular spot for nature lovers and birdwatchers.
+                                The landscape features a mix of hilly terrain, forests, and grasslands, providing a
+                                diverse habitat for flora and fauna.
+
+                                Gautala Autramghat Sanctuary is also significant for its efforts in conservation and
+                                ecological research, promoting awareness about the importance of protecting wildlife and
+                                their habitats. The serene environment and the opportunity for trekking and exploring
+                                nature make it a notable destination for eco-tourism.</p>
+                            <div class="new">
+                                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/mahalaxmi-temple-kolhapur-1-attr-nearby?qlt=82&ts=1726668749084"
+                                    alt="" class="cards">
+                                <h3>Mahalaxmi Temple</h3>
+                                <p>Mahalaxmi Temple, located in Kolhapur, Maharashtra, is one of the most revered Hindu
+                                    temples dedicated to Goddess Mahalaxmi, the goddess of wealth and prosperity. The
+                                    temple is believed to date back to the 7th century and showcases stunning
+                                    architecture with intricate carvings.
+
+                                    The idol of Mahalaxmi is made of black stone and is adorned with various jewels. The
+                                    temple attracts thousands of devotees, especially during festivals like Navratri and
+                                    Diwali. Its historical significance and cultural importance make it a prominent
+                                    pilgrimage site in Maharashtra.</p>
+        </section>
+        <!-- Hyderabad Section -->
+        <section id="Hyderabad" class="citySection">
+            <h2>Hyderabad</h2>
+            <div class="new">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/charminar-hyderabad-1-city-attr?qlt=82&ts=1726653237268"
+                    alt="" class="cards">
+                <h3>charminar</h3>
+                <p>Charminar is a historic monument located in Hyderabad, Telangana. Built in 1591 by Sultan Muhammad
+                    Quli Qutb Shah, it is an iconic symbol of the city and showcases stunning Indo-Islamic architecture.
+
+                    The structure features four grand arches and is adorned with intricate stucco work and minarets that
+                    rise to about 56 meters. It originally served as a gateway to the old city and a mosque.
+
+                    Surrounded by bustling markets, including Laad Bazaar known for bangles and traditional jewelry,
+                    Charminar attracts numerous visitors. It's particularly beautiful when illuminated at night. </p>
+                <div class="new">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/golconda-fort-hyderabad-telangana-1-attr-nearby?qlt=82&ts=1726674361623"
+                        alt="" class="cards">
+                    <h3>Golconda Fort</h3>
+                    <p>Golconda Fort, located in Hyderabad, Telangana, is a historic fortress renowned for its
+                        impressive architecture and rich history. Originally built in the 12th century, it was expanded
+                        by the Qutb Shahi dynasty in the 16th century.
+
+                        The fort features massive walls, intricate gates, and a series of palaces, mosques, and other
+                        structures. It is famous for its acoustic system, where a clap at the entrance can be heard at
+                        the highest point, which was used as a warning signal.
+
+                        Visitors can explore the fort's ruins, enjoy panoramic views of the city from its heights, and
+                        learn about its historical significance. The light and sound show in the evenings narrates the
+                        fort's history, making it a popular attraction.</p>
+                    <div class="new">
+                        <img src="https://s7ap1.scene7.com/is/image/incredibleindia/eturnagaram-wildlife-sanctuary-warangal-telangana-1-city-attr?qlt=82&ts=1726653619350"
+                            alt="" class="cards">
+                        <h3>Eturnagaram wildlife sanctuary</h3>
+                        <p>Eturnagaram Wildlife Sanctuary, located in the Mulugu district of Telangana, India, is known
+                            for its rich biodiversity and scenic landscapes. Established in 1978, it covers an area of
+                            around 807 square kilometers and is home to a variety of flora and fauna, including several
+                            species of deer, wild boar, and leopards.
+
+                            The sanctuary is characterized by its mixed deciduous forests and is an important habitat
+                            for various birds and reptiles as well. It attracts nature enthusiasts, trekkers, and
+                            wildlife photographers due to its diverse ecosystems and picturesque views. The sanctuary
+                            also plays a vital role in the conservation of endangered species and local wildlife.</p>
+                        <div class="new">
+                            <img src="https://s7ap1.scene7.com/is/image/incredibleindia/warangal-fort-warangal-telangana-1-city-attr?qlt=82&ts=1726653612057"
+                                alt="" class="cards">
+                            <h3>Warangal Fort</h3>
+                            <p>Warangal Fort, located in Warangal, Telangana, India, is a historical fortress that dates
+                                back to the 12th century. Originally built by the Kakatiya dynasty, the fort is known
+                                for its impressive architecture and rich cultural heritage.
+
+                                The fort complex features massive stone walls, intricate carvings, and several notable
+                                structures, including the iconic Thousand Pillar Temple, which showcases exquisite
+                                craftsmanship. The entrance to the fort is marked by a grand gateway known as the
+                                "Kakatiya Gateway," adorned with unique sculptures.
+
+                                Warangal Fort is not only a significant historical site but also a popular tourist
+                                attraction, offering insights into the region's history and architecture. The
+                                surrounding area features lush gardens and beautiful landscapes, making it a picturesque
+                                location for visitors.</p>
+                            <div class="new">
+                                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/thousand-pillar-temple-warangal-telangana-1-attr-nearby?qlt=82&ts=1726653463624"
+                                    alt="" class="cards">
+                                <h3>Thousand pillar</h3>
+                                <p>The Thousand Pillar Temple, located in Warangal, Telangana, India, is an exquisite
+                                    example of Kakatiya architecture, dating back to the 12th century. It is renowned
+                                    for its intricate carvings and unique design, featuring over a thousand intricately
+                                    sculpted pillars.
+
+                                    The temple is dedicated to Lord Shiva, along with deities like Vishnu and Surya, and
+                                    is characterized by its beautifully detailed sculptures depicting various
+                                    mythological scenes and figures. The main hall of the temple is supported by richly
+                                    carved pillars, each showcasing distinct artistry.
+
+                                    The temple's complex also includes a large Nandi (bull) statue and several smaller
+                                    shrines. Recognized for its historical and architectural significance, the Thousand
+                                    Pillar Temple is a UNESCO World Heritage Site and a major attraction for visitors
+                                    interested in India's rich cultural heritage.</p>
+        </section>
+        <!-- vijayawada Section -->
+        <section id="Vijayawada" class="citySection">
+            <h2>Vijayawada</h2>
+            <div class="new">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/1-uppalapadu-bird-sanctuary-guntur-andhra-pradesh-attr-nearby?qlt=82&ts=1726743743770"
+                    alt="" class="cards">
+                <h3>Uppalapadu Bird sanctuary</h3>
+                <p>Uppalapadu Bird Sanctuary, located near Guntur in Andhra Pradesh, India, is a notable wetland area
+                    that serves as a vital habitat for a variety of migratory and resident bird species. Covering
+                    approximately 500 acres, the sanctuary is particularly famous for hosting large populations of
+                    birds, especially during the winter months.
+
+                    The sanctuary is home to several species, including pelicans, storks, herons, and various waterfowl,
+                    making it a popular destination for birdwatchers and nature enthusiasts. The diverse vegetation,
+                    comprising wetlands and scrub, supports a rich ecosystem.
+
+                    Efforts for conservation and eco-tourism have been implemented to protect the habitat and promote
+                    awareness about the importance of bird conservation. Uppalapadu Bird Sanctuary offers a serene
+                    environment for visitors to observe and appreciate the beauty of avian life in their natural
+                    setting.</p>
+                <div class="new">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/1-amaravati-buddhist-site-guntur-andhra-pradesh-attr-nearby?qlt=82&ts=1726743720361"
+                        alt="" class="cards">
+                    <h3>Amaravathi stupa</h3>
+                    <p>The Amaravati Stupa, located in Amaravati, Andhra Pradesh, India, is one of the most significant
+                        archaeological sites related to Buddhism. Dating back to the 2nd century BCE, it was originally
+                        a large stupa that served as a reliquary for the remains of the Buddha.
+
+                        The stupa is renowned for its intricate carvings and sculptures, depicting various scenes from
+                        Buddhist teachings and Jataka tales. Although much of the original structure has been lost, the
+                        remains include a circular dome and several beautifully crafted gateways, known as toranas.
+
+                        The site is also home to a museum that houses numerous artifacts and sculptures discovered
+                        during excavations, providing insights into the art and culture of ancient India. Amaravati
+                        Stupa is a UNESCO World Heritage Site candidate and remains a significant pilgrimage destination
+                        for Buddhists and history enthusiasts alike.</p>
+                    <div class="new">
+                        <img src="https://s7ap1.scene7.com/is/image/incredibleindia/1-nagarjunakonda-guntur-andhra-pradesh-attr-nearby?qlt=82&ts=1726743770143"
+                            alt="" class="cards">
+                        <h3>Nagarjunakonda</h3>
+                        <p>Nagarjuna Konda is an archaeological site located in the Nagarjuna Sagar region of Andhra
+                            Pradesh, India. It is situated on an island in the Krishna River and is known for its
+                            historical and cultural significance in Buddhism.
+
+                            The site is named after the famous Buddhist philosopher Nagarjuna, who is believed to have
+                            lived in the 2nd century CE. Excavations have revealed a wealth of artifacts, including
+                            stupas, monasteries, and sculptures, reflecting the rich heritage of Buddhist art and
+                            architecture.
+
+                            Notable features include the large stupa dedicated to Nagarjuna and various inscriptions in
+                            Brahmi script. The site also houses a museum that showcases artifacts, including sculptures
+                            and relics, offering insights into the region's ancient Buddhist history. Nagarjuna Konda is
+                            a significant pilgrimage site for Buddhists and a popular destination for history and
+                            archaeology enthusiasts.</p>
+
+        </section>
+        <!-- vizag Section -->
+        <section id="Vizag" class="citySection">
+            <h2>vizag</h2>
+            <div class="new">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/borra-caves-visakhapatnam-andhra-pradesh-1-attr-nearby?qlt=82&ts=1726744321932"
+                    alt="" class="cards">
+                <h3>Borra caves</h3>
+                <p>Borra Caves are a fascinating network of limestone caves located near the village of Borra in Andhra
+                    Pradesh, about 90 kilometers from Visakhapatnam. These caves are known for their stunning stalactite
+                    and stalagmite formations, shaped over thousands of years by geological processes.
+
+                    The caves are believed to date back to the Paleolithic era and feature ancient rock art and
+                    inscriptions. The largest cave, known as the "Maha Dwara" or "Great Door," has a significant height
+                    and is often illuminated for visitors to appreciate the formations.
+
+                    Surrounded by lush greenery and the beautiful Eastern Ghats, the Borra Caves are also a popular
+                    destination for trekking and nature walks. </p>
+                <div class="new">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/indira-gandhi-zoological-gardens-vishakapatnam-1-attr-nearby?qlt=82&ts=1726744175514"
+                        alt="" class="cards">
+                    <h3> indira gandhi zoological park</h3>
+                    <p>Indira Gandhi Zoological Park, located in Visakhapatnam, Andhra Pradesh, is a prominent zoo
+                        spread over 625 acres in the picturesque surroundings of the Eastern Ghats. Established in 1977,
+                        the park is home to a diverse collection of animals, including tigers, lions, elephants, and
+                        various species of birds and reptiles.
+
+                        The zoo emphasizes conservation and education, providing visitors with information about
+                        wildlife and the importance of protecting endangered species. It features well-maintained
+                        habitats designed to replicate the animals' natural environments.</p>
+                    <div class="new">
+                        <img src="https://s7ap1.scene7.com/is/image/incredibleindia/sri-kanaka-mahalakshmi-temple-vishakapatnam-andhra-pradesh-1-attr-nearby?qlt=82&ts=1726744136517"
+                            alt="" class="cards">
+                        <h3>sri sri kanaka mahalakshmi temple</h3>
+                        <p>Sri Kanaka Mahalakshmi Temple, located in Visakhapatnam (Vizag), Andhra Pradesh, is a revered
+                            Hindu shrine dedicated to Goddess Mahalakshmi, the goddess of wealth and prosperity.
+                            Situated on a hilltop, the temple offers stunning views of the surrounding area.
+
+                            The temple's architecture features intricate carvings and traditional design, attracting
+                            devotees and tourists alike. It hosts various religious festivals, particularly during
+                            Navaratri, drawing large crowds.
+
+                            Visitors often come to seek blessings for prosperity and well-being. The temple's serene
+                            atmosphere and scenic location make it a popular spot for both spiritual reflection and
+                            sightseeing in Visakhapatnam.</p>
+                        <div class="new">
+                            <img src="https://s7ap1.scene7.com/is/image/incredibleindia/kailasagiri-visakhapatnam-andhra-pradesh-1-attr-nearby?qlt=82&ts=1726744257588"
+                                alt="" class="cards">
+                            <h3>kailasagiri</h3>
+                            <p>Kailashgiri is a scenic hilltop park located in Visakhapatnam, Andhra Pradesh. It offers
+                                breathtaking views of the Bay of Bengal and the city below, making it a popular tourist
+                                destination.
+
+                                The park features a massive statue of Lord Shiva and Parvati, lush gardens, and walking
+                                paths, providing a serene environment for visitors. There’s also a ropeway that takes
+                                you to the top, offering panoramic views during the ride.
+
+                                Kailashgiri is ideal for picnics, family outings, and photography. The sunset views from
+                                the hill are particularly stunning. </p>
+                            <div class="new">
+                                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/archaeological-museum-visakhapatnam-andhra-pradesh-1-attr-nearby?qlt=82&ts=1726744395680"
+                                    alt="" class="cards">
+                                <h3> Archaelogical Museum</h3>
+                                <p>The Archaeological Museum in Visakhapatnam, Andhra Pradesh, is a notable site that
+                                    showcases the rich cultural heritage and history of the region. Established in 1960,
+                                    the museum features a collection of artifacts from ancient civilizations, including
+                                    sculptures, pottery, coins, and inscriptions.
+
+                                    Key highlights of the museum include relics from the Kalinga and the ancient
+                                    Buddhist sites in and around Visakhapatnam, providing insights into the region's
+                                    archaeological significance. The museum also emphasizes the artistic and
+                                    architectural achievements of past eras.
+
+                                    Visitors can explore the exhibits that span various periods, making it an
+                                    educational destination for history enthusiasts and tourists interested in the
+                                    archaeological heritage of Andhra Pradesh.</p>
+        </section>
+        <!-- Banglore Section -->
+        <section id="Banglore" class="citySection">
+            <h2>Banglore</h2>
+            <div class="new">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/mangaladevi-temple-mangalore-karnataka-1-attr-nearby?qlt=82&ts=1726722310130"
+                    alt="" class="cards">
+                <h3>mangladevi temple</h3>
+                <p>Mangladevi Temple, located in the vicinity of the city of Kollam in Kerala, is an ancient Hindu
+                    temple dedicated to Goddess Mangladevi, a manifestation of the goddess Durga. The temple is believed
+                    to date back to the 9th century and is renowned for its historical and cultural significance.
+
+                    The architecture of the temple reflects traditional Kerala styles, and it features intricate
+                    carvings and sculptures. It is particularly popular during the annual festival, which attracts
+                    numerous devotees and tourists.
+
+                    The temple is set in a serene environment, surrounded by lush greenery, making it a peaceful place
+                    for worship and reflection. It is considered an important pilgrimage site for those seeking
+                    blessings and is known for its vibrant rituals and festivities.</p>
+                <div class="new">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/mysore-palace-karnataka-state-hero?qlt=82&ts=1726723003730"
+                        alt="" class="cards">
+                    <h3>Mysore palace</h3>
+                    <p>Mysore Palace, located in Mysore, Karnataka, is a stunning example of Indo-Saracenic
+                        architecture. It serves as the official residence of the Wadiyar dynasty and is one of the most
+                        visited tourist attractions in India.
+
+                        The palace is renowned for its intricate carvings, beautiful domes, and vibrant stained glass
+                        windows. It features several ornate halls, including the Durbar Hall and the Kalyana Mantapa,
+                        adorned with elaborate decor.
+
+                        The palace is particularly spectacular during the Dasara festival when it is illuminated with
+                        thousands of lights and hosts various cultural events. Visitors can explore the palace's rich
+                        history, artifacts, and the surrounding gardens.</p>
+                    <div class="new">
+                        <img src="https://s7ap1.scene7.com/is/image/incredibleindia/lotus-mahal-hampi-karnataka1-attr-nearby?qlt=82&ts=1726721942449"
+                            alt="" class="cards">
+                        <h3> Lotus Mahal</h3>
+                        <p>otus Mahal, located in the Hampi UNESCO World Heritage Site in Karnataka, India, is an
+                            exquisite example of Indo-Islamic architecture. Built during the Vijayanagara Empire in the
+                            16th century, it features a unique design that resembles a lotus flower, with ornate arches
+                            and domes.
+
+                            The structure served as a pleasure palace for royal women and is characterized by its
+                            intricate carvings, beautiful arches, and spacious interiors. The lotus motifs and the
+                            overall architectural style reflect a blend of Hindu and Islamic influences.
+
+                            Surrounded by lush gardens and located near the Zenana enclosure (the women's quarters),
+                            Lotus Mahal is a significant tourist attraction in Hampi, showcasing the artistic brilliance
+                            of the period and providing insights into the royal lifestyle of the Vijayanagara rulers.
+                        </p>
+                        <div class="new">
+                            <img src="https://s7ap1.scene7.com/is/image/incredibleindia/virupaksha-temple-hampi-karnataka-1-attr-nearby?qlt=82&ts=1726721690964"
+                                alt="" class="cards">
+                            <h3>virupaksha Temple</h3>
+                            <p>Virupaksha Temple, located in Hampi, Karnataka, is one of the most significant and
+                                ancient temples dedicated to Lord Shiva. Dating back to the 7th century, it is part of
+                                the Vijayanagara Empire's architectural marvels and is a UNESCO World Heritage Site.
+
+                                The temple features stunning Dravidian architecture, with a towering gopuram (gateway)
+                                adorned with intricate carvings. The main sanctum houses a linga, a symbol of Lord
+                                Shiva, and the temple complex includes several smaller shrines, pillared halls, and a
+                                large courtyard.
+
+                                Virupaksha Temple is not only a major pilgrimage site but also a cultural hub, hosting
+                                various festivals and rituals throughout the year. Its historical significance,
+                                architectural beauty, and spiritual ambiance make it a must-visit destination in Hampi.
+                            </p>
+                            <div class="new">
+                                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/1-yadahalli-chinkara-wildlife-sanctuary-bagalkote-karnataka-attr-nearby?qlt=82&ts=1726717679574"
+                                    alt="" class="cards">
+                                <h3>yadahli chinkara wildlife sanctuary</h3>
+                                <p>Yadgiri Chinkara Wildlife Sanctuary, located in the Yadgir district of Karnataka,
+                                    India, is established to conserve the endangered chinkara (Indian gazelle) and its
+                                    habitat. Covering an area of approximately 72 square kilometers, the sanctuary
+                                    features a mix of grasslands, scrub forests, and rocky terrain.
+
+                                    In addition to chinkaras, the sanctuary is home to various other wildlife species,
+                                    including deer, foxes, and numerous bird species, making it a great spot for
+                                    wildlife enthusiasts and birdwatchers.
+
+                                    The sanctuary focuses on conservation efforts and habitat restoration, aiming to
+                                    protect the delicate ecosystem of the region. Its relatively undisturbed environment
+                                    offers visitors a chance to experience the beauty of nature and observe wildlife in
+                                    their natural habitat.</p>
+        </section>
+        <!-- chennai Section -->
+        <section id="chennai" class="citySection">
+            <h2>chennai</h2>
+            <img src="https://s7ap1.scene7.com/is/image/incredibleindia/1-marudhamalai-temple---coimbatore-tamil-nadu-city-attr?qlt=82&ts=1726674584698"
+                alt="" class="cards">
+            <h3>Marudhamalai Temple</h3>
+            <p>Marudhamalai Temple, located near Coimbatore in Tamil Nadu, is a prominent Hindu temple dedicated to Lord
+                Murugan. Nestled on the Marudhamalai Hill, the temple is situated at an elevation of about 600 meters,
+                offering stunning views of the surrounding landscape.
+
+                The temple is known for its rich architecture and intricate carvings. It features a grand gopuram
+                (tower) and several shrines dedicated to different deities associated with Lord Murugan. Pilgrims and
+                tourists flock to the temple, especially during festivals like Thaipusam and Skanda Shashti.
+
+                The serene atmosphere and scenic beauty of the hill make Marudhamalai Temple a popular destination for
+                both spiritual seekers and nature lovers. The site also offers opportunities for trekking and
+                exploration of the natural surroundings.</p>
+            <div class="new">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/st-marys-church-chennai1-city-attr?qlt=82&ts=1726655006269"
+                    alt="" class="cards">
+                <h3>St.aMrys Church</h3>
+                <p>St. Mary's Church, located in Chennai, India, is one of the oldest churches in the country,
+                    established in 1678. It is part of the Church of South India and features a blend of Gothic and
+                    Indian architectural styles. The church is renowned for its historical significance, beautiful
+                    stained glass windows, and serene atmosphere. It has been a focal point for the Christian community
+                    in Chennai and serves as a popular tourist attraction as well</p>
+            </div>
+            <div class="new">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/guindy-national-park-chennai-tamil-nadu-1-city-attr?qlt=82&ts=1726655068972"
+                    alt="" class="cards">
+                <h3>Guindy Nationalpark</h3>
+                <p>Guindy National Park, located in Chennai, Tamil Nadu, is one of the smallest national parks in India,
+                    covering an area of about 2.70 square kilometers. Established in 1977, it is a unique blend of urban
+                    and natural environments, situated within the city limits.
+
+                    The park is home to a variety of wildlife, including deer, jackals, mongoose, and over 100 species
+                    of birds. It features diverse habitats, such as dry deciduous forests, scrubland, and grasslands.
+
+                    Guindy National Park also houses the Children's Park, which includes a small zoo, making it a
+                    popular spot for families and children. The park plays a crucial role in conserving the biodiversity
+                    of the region while providing a green oasis for city residents to enjoy nature and engage in outdoor
+                    activities</p>
+            </div>
+            <div class="new">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/vivekananda-rock-memorial-kanyakumari-tamil-nadu-city-body?qlt=82&ts=1726674566875"
+                    alt="" class="cards">
+                <h3>vivekananda rock memorial</h3>
+                <p>he Vivekananda Memorial, located on Kanyakumari's coast in Tamil Nadu, is dedicated to Swami
+                    Vivekananda, a key figure in introducing Indian philosophy to the Western world. The memorial stands
+                    on the rock where he is believed to have meditated in 1892.
+
+                    Inaugurated in 1970, the memorial features stunning architecture, including a grand hall, meditation
+                    rooms, and a statue of Swami Vivekananda. The site also offers beautiful views of the confluence of
+                    the Arabian Sea, the Bay of Bengal, and the Indian Ocean.
+
+                    Visitors come to pay homage, meditate, and learn about Vivekananda's teachings on spirituality and
+                    service. The memorial serves as a significant cultural and spiritual landmark, attracting tourists
+                    and devotees alike.</p>
+                <div class="new">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/marina-beach-chennai-tamil-nadu-1-attr-nearby?qlt=82&ts=1726654958315"
+                        alt="" class="cards">
+                    <h3>Marina Beach</h3>
+                    <p>Marina Beach, located in Chennai, Tamil Nadu, is one of the longest urban beaches in the world,
+                        stretching about 13 kilometers along the Bay of Bengal. It is a popular destination for both
+                        locals and tourists, known for its vibrant atmosphere and scenic beauty.
+
+                        The beach features a promenade lined with food stalls, recreational areas, and various
+                        monuments, including the iconic statue of Mahatma Gandhi. It's a great spot for early morning
+                        walks, sunset views, and enjoying local snacks like sundal and murukku.
+
+                        Despite being a popular gathering place, swimming is generally discouraged due to strong
+                        currents. </p>
+                </div>
+        </section>
+
+
+      
+    <script>
+        const cityData = {
+            newdelhi: {
+                name: "New Delhi",
+                famousFor: "Red Fort, India Gate, Lotus Temple, Jama Masjid, Qutub Minar, Parliament"
+            },
+            Agra: {
+                name: "Agra",
+                famousFor: "Taj Mahal"
+            },
+            ladakh: {
+                name: "Ladakh",
+                famousFor: "Sanchi Stupa, Nubra Valley"
+            },
+            Mumbai: {
+                name: "Mumbai",
+                famousFor: "Gateway of India, Taj Hotel, Elephanta Caves"
+            },
+            Gujarat: {
+                name: "Gujarat",
+                famousFor: "Statue of Unity, Somnath Temple, Gir National Park"
+            }
+        };
+
+        function getCityInfo() {
+            const select = document.getElementById("citySelect");
+            const cityName = select.value;
+            const infoDiv = document.getElementById("cityInfo");
+
+            // Clear previous info
+            infoDiv.innerHTML = "";
+
+            if (cityName) {
+                const city = cityData[cityName];
+                infoDiv.innerHTML = `
+                    <h2>${city.name}</h2>
+                    <p>Famous For: ${city.famousFor}</p>
+                `;
+            }
+        }
+
+        // Hide all sections initially
+        window.onload = () => {
+            const infoDiv = document.getElementById("cityInfo");
+            infoDiv.innerHTML = ""; // Ensure info is hidden on load
+        };
+    </script>
+</body>
+
+</html>

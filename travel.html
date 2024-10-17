@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover enchanting destinations and cultural hotspots in India. Your ultimate travel guide awaits!">
+    <title>Travel with Us</title>
+    <link rel="stylesheet" href="travel.css">
+</head>
+
+<body>
+    <div id="intro-animation" class="intro-animation">
+        <h1 class="animated-logo">Travel with Me</h1>
+    </div>
+    
+    <header class="navbar">
+        <div class="logo-container">
+            <h1 class="logo">Travel with Me</h1>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="cities/explore.html">Travel food</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="content">
+        <h1>Welcome <br>to the <span>ultimate</span><br>travel guide</h1>
+        <p> "Experience the magic of India! Our site offers insights into enchanting destinations, <br>cultural hotspots, and local delights. Let us help you discover the incredible beauty that awaits <br> in every corner of this remarkable country."</p>
+        <a href="#search"><button class="cn">Start Here</button></a>
+    </main>
+    
+    <div class="content2" id="search">
+        <h3>Search <br>your<span> place</span><br>to visit</h3>
+    </div>
+    
+    <div class="box">
+        <h2>Search for a City</h2>
+        <input type="text" id="cityInput" placeholder="Enter a city name">
+        <button onclick="searchCity()">Search</button>
+    </div>
+
+    <div class="content2">
+        <p>Embark on a journey through the vibrant landscapes of India! Our guide provides insider knowledge about
+            must-see attractions, hidden gems,<br>and local cuisine that will tantalize your taste buds. Experience the
+            rich cultural tapestry and breathtaking beauty each city has to offer, from bustling markets to serene
+            temples.<p>
+          
+    </div>
+
+    <script>
+        function searchCity() {
+            const city = document.getElementById('cityInput').value.toLowerCase();
+            let url;
+            switch (city) {
+                case 'hyderabad':
+                    url = 'cities/hyd.html';
+                    break;
+                case 'bangalore':
+                    url = 'cities/bang.html';
+                    break;
+                case 'chennai':
+                    url = 'cities/chennai.html';
+                    break;
+                case 'delhi':
+                    url = 'cities/delhi.html';
+                    break;
+                default:
+                    alert('City not found!');
+                    return;
+            }
+            window.location.href = url;
+        }
+    </script>
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            document.getElementById('intro-animation').style.display = 'none';
+        }, 6000); 
+    });
+</script>
+
+
+    
+    
+    <div id="services" class="sections-container">
+        <div id="services" class="services-section">
+            <h1>Our Services</h1>
+            <div class="services-container">
+                <div class="service-card">
+                    <h2>Transport</h2>
+                    <p>"Getting around is easy with our comprehensive transportation options. Whether you prefer the convenience
+                        of public transportation, the flexibility of renting a car, or the personalized experience of a guided
+                        tour, we have something to suit your needs. Our website provides detailed information on local bus and
+                        train schedules, car rental services, and popular tour options, ensuring a seamless and enjoyable travel
+                        experience."</p>
+                </div>
+                <div class="service-card">
+                    <h2>Accommodation</h2>
+                    <p>"Find the perfect place to stay with our wide range of accommodation options. From budget-friendly
+                        hostels to luxurious hotels, we have something to suit every taste and budget. Whether you're looking
+                        for a cozy guesthouse in the heart of the city or a secluded villa in the countryside, our website
+                        offers detailed information on hotels, apartments, and other accommodation options, making it easy to
+                        find the ideal place to rest your head during your travels."</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="about-section">
+            <h1>About Us</h1>
+            <div class="about-container">
+                <div class="about-card">
+                    <h2>Our Mission</h2>
+                    <p>At "Travel with Me", our mission is to make travel easy, enjoyable, and accessible for everyone. We aim to provide detailed guides, valuable tips, and insider knowledge about the best destinations in India.</p>
+                </div>
+                <div class="about-card">
+                    <h2>Our Vision</h2>
+                    <p>We envision a world where travel is more than just visiting places—it's about immersing oneself in new cultures, discovering hidden gems, and creating unforgettable memories. We strive to inspire adventurers to explore with a sense of curiosity and wonder.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h3>Travel with Me</h3>
+                <p>Your ultimate guide to exploring India's enchanting destinations and cultural hotspots.</p>
+                <p>Connect with us on social media:</p>
+                <ul class="social-links">
+                    <li><a href="https://wa.me/your-whatsapp-number" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="24"></a></li>
+                    <li><a href="https://www.instagram.com/your-instagram-username" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="24"></a></li>
+                    <li><a href="https://www.facebook.com/your-facebook-username" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="24"></a></li>
+                </ul>
+                <p>© 2024 Travel with Me. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
